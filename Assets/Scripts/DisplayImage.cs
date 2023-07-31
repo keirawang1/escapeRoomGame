@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class DisplayImage : MonoBehaviour
 {
+    public enum State {
+        normal, ChangedView
+    };
+    
+    public State CurrentState {get; set;}
+    
     public int CurrentRoom {
         get { return currentRoom; }
         set {
@@ -24,11 +30,10 @@ public class DisplayImage : MonoBehaviour
     }
 
     void Update() {
-        if(currentRoom != previousWall) {
-            GetComponent<SpriteRenderer>().sprite - Resources.Load<Sprite>("Sprites/room" + currentRoom.ToString());
-
+        if(currentRoom != previousRoom) {
+            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/room" + currentRoom.ToString());
         }
 
-        previousWall = currentWall;
+        previousRoom = currentRoom;
     }
 }

@@ -14,18 +14,13 @@ public class ButtonHandler : MonoBehaviour
     }
 
     public void OnRightClickArrow() {
-        currentDisplay.CurrentWall += 1;
+        currentDisplay.CurrentRoom = currentDisplay.CurrentRoom + 1;
 
     }
 
     public void OnLeftClickArrow() {
-        currentDisplay.CurrentWall -= 1;
+        currentDisplay.CurrentRoom = currentDisplay.CurrentRoom - 1;
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
