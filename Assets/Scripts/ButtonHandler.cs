@@ -23,4 +23,8 @@ public class ButtonHandler : MonoBehaviour
 
     }
 
+    public void OnClickReturn() {
+        currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/room" + currentDisplay.CurrentRoom);
+    }
+
 }
