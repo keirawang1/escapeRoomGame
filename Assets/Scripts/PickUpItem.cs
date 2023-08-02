@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class PickUpItem : MonoBehaviour, Interactable {
 
     public string DisplaySprite;
+    public enum property {usable, displayable};
+
+    public property itemProperty;
 
     private GameObject InventorySlots;
 

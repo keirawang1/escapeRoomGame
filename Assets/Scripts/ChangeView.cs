@@ -9,7 +9,5 @@ public class ChangeView : MonoBehaviour, Interactable
 
     public void Interact(DisplayImage currentDisplay) {
         currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + SpriteName);
-        currentDisplay.CurrentState = DisplayImage.State.ChangedView;
-   
     }
 }
